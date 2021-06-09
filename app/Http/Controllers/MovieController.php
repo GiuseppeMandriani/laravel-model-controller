@@ -10,11 +10,13 @@ class MovieController extends Controller
 {
     // ARCHIVIO FILM
     public function index(){
-        $movies = Movie::all();
-        dump($movies);
-        return view('movies');
-    }
 
     // Ottenere film dal db
+        $movies = Movie::all();
+        // dump($movies);
+
+        return view('movies', compact('movies'));
+    }
+
 
 }
